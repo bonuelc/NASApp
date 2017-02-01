@@ -12,6 +12,9 @@
 		852DA2BD1E426E3500789743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852DA2BB1E426E3500789743 /* Main.storyboard */; };
 		852DA2BF1E426E3500789743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852DA2BE1E426E3500789743 /* Assets.xcassets */; };
 		852DA2C21E426E3500789743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852DA2C01E426E3500789743 /* LaunchScreen.storyboard */; };
+		852DA2CC1E428DC500789743 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CA1E428DC500789743 /* Alamofire.framework */; };
+		852DA2CD1E428DC500789743 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CB1E428DC500789743 /* Moya.framework */; };
+		85C508D21E49332B009D54CC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C508D11E49332B009D54CC /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		852DA2BE1E426E3500789743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852DA2C11E426E3500789743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852DA2C31E426E3500789743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852DA2CA1E428DC500789743 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		852DA2CB1E428DC500789743 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		85C508D11E49332B009D54CC /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852DA2CC1E428DC500789743 /* Alamofire.framework in Frameworks */,
+				852DA2CD1E428DC500789743 /* Moya.framework in Frameworks */,
+				85C508D21E49332B009D54CC /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				852DA2B61E426E3500789743 /* NASApp */,
 				852DA2B51E426E3500789743 /* Products */,
+				852DA2C91E428DC500789743 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +72,16 @@
 				852DA2C31E426E3500789743 /* Info.plist */,
 			);
 			path = NASApp;
+			sourceTree = "<group>";
+		};
+		852DA2C91E428DC500789743 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85C508D11E49332B009D54CC /* Result.framework */,
+				852DA2CA1E428DC500789743 /* Alamofire.framework */,
+				852DA2CB1E428DC500789743 /* Moya.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +280,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NASApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASApp;
@@ -273,6 +297,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NASApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASApp;
@@ -300,6 +328,7 @@
 				852DA2C81E426E3500789743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
