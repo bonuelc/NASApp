@@ -38,5 +38,9 @@ extension MyService: TargetType {
     var parameters: [String : Any]? {
         return ["sol":"1000", "api_key":api_key]
     }
+    
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
 }
 
