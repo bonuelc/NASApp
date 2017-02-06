@@ -15,7 +15,25 @@
 		852DA2CC1E428DC500789743 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CA1E428DC500789743 /* Alamofire.framework */; };
 		852DA2CD1E428DC500789743 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CB1E428DC500789743 /* Moya.framework */; };
 		85C508D21E49332B009D54CC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C508D11E49332B009D54CC /* Result.framework */; };
+		85C508D81E4933C9009D54CC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D51E4933C9009D54CC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85C508D91E4933C9009D54CC /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D61E4933C9009D54CC /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85C508DA1E4933C9009D54CC /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D71E4933C9009D54CC /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85C508D41E4933AD009D54CC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85C508D81E4933C9009D54CC /* Alamofire.framework in CopyFiles */,
+				85C508D91E4933C9009D54CC /* Moya.framework in CopyFiles */,
+				85C508DA1E4933C9009D54CC /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		852DA2B41E426E3500789743 /* NASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +46,9 @@
 		852DA2CA1E428DC500789743 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		852DA2CB1E428DC500789743 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		85C508D11E49332B009D54CC /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		85C508D51E4933C9009D54CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		85C508D61E4933C9009D54CC /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		85C508D71E4933C9009D54CC /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +68,9 @@
 		852DA2AB1E426E3300789743 = {
 			isa = PBXGroup;
 			children = (
+				85C508D51E4933C9009D54CC /* Alamofire.framework */,
+				85C508D61E4933C9009D54CC /* Moya.framework */,
+				85C508D71E4933C9009D54CC /* Result.framework */,
 				852DA2B61E426E3500789743 /* NASApp */,
 				852DA2B51E426E3500789743 /* Products */,
 				852DA2C91E428DC500789743 /* Frameworks */,
@@ -95,6 +119,7 @@
 				852DA2B11E426E3400789743 /* Frameworks */,
 				852DA2B21E426E3400789743 /* Resources */,
 				85C508D31E493365009D54CC /* ShellScript */,
+				85C508D41E4933AD009D54CC /* CopyFiles */,
 			);
 			buildRules = (
 			);
