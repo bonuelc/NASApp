@@ -28,5 +28,9 @@ extension MyService: TargetType {
         case .spirit: return "/mars-photos/api/v1/rovers/spirit/photos"
         }
     }
+    
+    var method: Moya.Method {
+        return .get
+    }
 }
 
