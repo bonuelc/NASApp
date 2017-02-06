@@ -18,6 +18,7 @@
 		85C508D81E4933C9009D54CC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D51E4933C9009D54CC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85C508D91E4933C9009D54CC /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D61E4933C9009D54CC /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85C508DA1E4933C9009D54CC /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D71E4933C9009D54CC /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85C1ECB41E47EA3800F5F930 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1ECB31E47EA3800F5F930 /* MyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		85C508D51E4933C9009D54CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		85C508D61E4933C9009D54CC /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		85C508D71E4933C9009D54CC /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		85C1ECB31E47EA3800F5F930 /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				852DA2B71E426E3500789743 /* AppDelegate.swift */,
 				852DA2B91E426E3500789743 /* ViewController.swift */,
+				85C1ECB31E47EA3800F5F930 /* MyService.swift */,
 				852DA2BB1E426E3500789743 /* Main.storyboard */,
 				852DA2BE1E426E3500789743 /* Assets.xcassets */,
 				852DA2C01E426E3500789743 /* LaunchScreen.storyboard */,
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C1ECB41E47EA3800F5F930 /* MyService.swift in Sources */,
 				852DA2BA1E426E3500789743 /* ViewController.swift in Sources */,
 				852DA2B81E426E3500789743 /* AppDelegate.swift in Sources */,
 			);
