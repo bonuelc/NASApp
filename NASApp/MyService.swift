@@ -9,6 +9,8 @@
 import Foundation
 import Moya
 
+private let api_key = "zlTZaHucX1ayYgkmRPCWjLpiTsny09pZHlHzP0HI"
+
 enum MyService {
     case curiosity
     case opportunity
@@ -31,6 +33,10 @@ extension MyService: TargetType {
     
     var method: Moya.Method {
         return .get
+    }
+    
+    var parameters: [String : Any]? {
+        return ["sol":"1000", "api_key":api_key]
     }
 }
 
