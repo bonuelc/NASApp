@@ -16,5 +16,9 @@ enum MyService {
 }
 
 extension MyService: TargetType {
+    
+    var baseURL: URL {
+        return URL(string: "https://api.nasa.gov")!
+    }
 }
 
