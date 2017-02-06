@@ -15,3 +15,6 @@ enum MyService {
     case spirit
 }
 
+extension MyService: TargetType {
+}
+
