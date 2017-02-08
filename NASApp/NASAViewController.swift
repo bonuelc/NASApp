@@ -57,4 +57,8 @@ class NASAViewController: UIViewController {
     // MARK: - UICollectionViewDataSource
 
 extension NASAViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return nasaViewModel.numberOfSections
+    }
 }
