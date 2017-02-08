@@ -21,5 +21,19 @@ class ViewController: UIViewController {
         
         return collectionView
     }()
+    
+    // MARK: - Layout
+    
+    override func viewWillLayoutSubviews() {
+    
+        view.addSubview(collectionView)
+    
+        NSLayoutConstraint.activate([
+            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            collectionView.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ])
+    }
 }
 
