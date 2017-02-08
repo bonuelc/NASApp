@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NASAViewController.swift
 //  NASApp
 //
 //  Created by Christopher Bonuel on 2/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NASAViewController: UIViewController {
     
     // MARK: - UI
     

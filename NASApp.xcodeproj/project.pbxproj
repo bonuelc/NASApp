@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852DA2B81E426E3500789743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2B71E426E3500789743 /* AppDelegate.swift */; };
-		852DA2BA1E426E3500789743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2B91E426E3500789743 /* ViewController.swift */; };
+		852DA2BA1E426E3500789743 /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DA2B91E426E3500789743 /* NASAViewController.swift */; };
 		852DA2BF1E426E3500789743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852DA2BE1E426E3500789743 /* Assets.xcassets */; };
 		852DA2C21E426E3500789743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852DA2C01E426E3500789743 /* LaunchScreen.storyboard */; };
 		852DA2CC1E428DC500789743 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CA1E428DC500789743 /* Alamofire.framework */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		852DA2B41E426E3500789743 /* NASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852DA2B71E426E3500789743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		852DA2B91E426E3500789743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		852DA2B91E426E3500789743 /* NASAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewController.swift; sourceTree = "<group>"; };
 		852DA2BE1E426E3500789743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		852DA2C11E426E3500789743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852DA2C31E426E3500789743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				852DA2B71E426E3500789743 /* AppDelegate.swift */,
-				852DA2B91E426E3500789743 /* ViewController.swift */,
+				852DA2B91E426E3500789743 /* NASAViewController.swift */,
 				8598F8381E4B837D00F0200B /* NASAViewModel.swift */,
 				8598F83A1E4B854300F0200B /* RoverPhotos.swift */,
 				85C1ECB31E47EA3800F5F930 /* MyService.swift */,
@@ -210,7 +210,7 @@
 				8598F8391E4B837D00F0200B /* NASAViewModel.swift in Sources */,
 				8598F83B1E4B854300F0200B /* RoverPhotos.swift in Sources */,
 				85C1ECB41E47EA3800F5F930 /* MyService.swift in Sources */,
-				852DA2BA1E426E3500789743 /* ViewController.swift in Sources */,
+				852DA2BA1E426E3500789743 /* NASAViewController.swift in Sources */,
 				852DA2B81E426E3500789743 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

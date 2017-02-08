@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window = window else { return false }
         window.backgroundColor = .white
         
-        window.rootViewController = ViewController()
+        window.rootViewController = NASAViewController()
         window.makeKeyAndVisible()
         
         return true
