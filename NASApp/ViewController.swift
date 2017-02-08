@@ -22,6 +22,23 @@ class ViewController: UIViewController {
         return collectionView
     }()
     
+    // MARK: - Properties
+    
+    let nasaViewModel: NASAViewModel
+    
+    // MARK: - Initializers
+    
+    init(nasaViewModel: NASAViewModel = NASAViewModel()) {
+        
+        self.nasaViewModel = nasaViewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Layout
     
     override func viewWillLayoutSubviews() {
