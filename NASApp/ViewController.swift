@@ -9,5 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - UI
+    
+    lazy var collectionView: UICollectionView = {
+        
+        var flowLayout = UICollectionViewFlowLayout.init()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return collectionView
+    }()
 }
 
