@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum NASASection: Int {
+    case marsRoverImagery
+    case count
+}
+
 class NASAViewModel {
     
     // MARK: Properties
