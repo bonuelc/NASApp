@@ -9,5 +9,15 @@
 import Foundation
 
 class NASAViewModel {
+    
+    // MARK: Properties
+    
+    private let roverPhotos: RoverPhotos
+    
+    // MARK: - Initializers
+    
+    init(roverPhotos: RoverPhotos = RoverPhotos()) {
+        self.roverPhotos = roverPhotos
+    }
 }
 
