@@ -9,5 +9,9 @@
 import Foundation
 
 class RoverPhotos {
+    
+    // MARK: - Properties
+    
+    private var photoURLs = [URL]()
 }
 
