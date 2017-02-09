@@ -61,4 +61,8 @@ extension NASAViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return nasaViewModel.numberOfSections
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return nasaViewModel.numberOfPhotos(inSection: section)
+    }
 }
