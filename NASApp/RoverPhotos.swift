@@ -12,10 +12,18 @@ class RoverPhotos {
     
     // MARK: - Properties
     
-    private var photoURLs = [URL]()
+    fileprivate var photoURLs = [URL]()
     
     var count: Int {
         return photoURLs.count
     }
 }
 
+// MARK: - Helper Methods
+
+extension RoverPhotos {
+    
+    subscript(index: Int) -> URL {
+        return photoURLs[index]
+    }
+}
