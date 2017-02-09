@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NASAViewController: UIViewController {
     
@@ -66,5 +67,14 @@ extension NASAViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return nasaViewModel.numberOfPhotos(inSection: section)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as? PhotoCell else { fatalError() }
+        let url = nasaViewModel.photoURL(at: indexPath)
+        
+        return cell.configure(withImageFrom: url)
     }
 }
