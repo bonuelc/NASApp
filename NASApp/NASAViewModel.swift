@@ -28,5 +28,9 @@ class NASAViewModel {
     init(roverPhotos: RoverPhotos = RoverPhotos()) {
         self.roverPhotos = roverPhotos
     }
+        
+    var numberOfSections: Int {
+        return NASASection.count
+    }
 }
 
