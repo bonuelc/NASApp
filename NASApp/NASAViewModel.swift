@@ -17,7 +17,7 @@ enum NASASection: Int {
     }()
 }
 
-class NASAViewModel {
+class NASAViewModel: UpdateReceiverType {
     
     // MARK: Properties
     
@@ -52,6 +52,10 @@ class NASAViewModel {
         case .marsRoverImagery: return roverPhotos[indexPath.row]
         default: fatalError()
         }
+    }
+    
+    func didUpdateModel() {
+        updateReceiver?.didUpdateModel()
     }
 }
 
