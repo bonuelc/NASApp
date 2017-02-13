@@ -9,6 +9,10 @@
 import UIKit
 import Kingfisher
 
+protocol UpdateReceiverType {
+    func didUpdateModel()
+}
+
 class NASAViewController: UIViewController {
     
     // MARK: - UI
