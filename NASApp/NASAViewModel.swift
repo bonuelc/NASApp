@@ -32,5 +32,15 @@ class NASAViewModel {
     var numberOfSections: Int {
         return NASASection.count
     }
+    
+    func numberOfPhotos(inSection section: Int) -> Int {
+        
+        guard let nasaSection = NASASection(rawValue: section) else { fatalError() }
+        
+        switch nasaSection {
+        case .marsRoverImagery: return roverPhotos.count
+        default: return 0
+        }
+    }
 }
 
