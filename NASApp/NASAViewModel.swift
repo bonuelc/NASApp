@@ -42,5 +42,15 @@ class NASAViewModel {
         default: return 0
         }
     }
+    
+    func photoURL(at indexPath: IndexPath) -> URL {
+        
+        guard let nasaSection = NASASection(rawValue: indexPath.section) else { fatalError() }
+        
+        switch nasaSection {
+        case .marsRoverImagery: return roverPhotos[indexPath.row]
+        default: fatalError()
+        }
+    }
 }
 
