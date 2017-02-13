@@ -22,6 +22,7 @@ class NASAViewModel {
     // MARK: Properties
     
     private let roverPhotos: RoverPhotos
+    var updateReceiver: UpdateReceiverType?
     
     // MARK: - Initializers
     
