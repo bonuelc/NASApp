@@ -42,6 +42,8 @@ class NASAViewController: UIViewController, UpdateReceiverType {
         self.nasaViewModel = nasaViewModel
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.nasaViewModel.updateReceiver = self
     }
     
     required init?(coder aDecoder: NSCoder) {
