@@ -13,5 +13,9 @@ class RoverPhotos {
     // MARK: - Properties
     
     private var photoURLs = [URL]()
+    
+    var count: Int {
+        return photoURLs.count
+    }
 }
 
