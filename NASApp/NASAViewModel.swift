@@ -27,7 +27,10 @@ class NASAViewModel: UpdateReceiverType {
     // MARK: - Initializers
     
     init(roverPhotos: RoverPhotos = RoverPhotos()) {
+        
         self.roverPhotos = roverPhotos
+        
+        self.roverPhotos.updateReceiver = self
     }
         
     var numberOfSections: Int {
