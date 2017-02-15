@@ -13,7 +13,7 @@ protocol UpdateReceiverType {
     func didUpdateModel()
 }
 
-class NASAViewController: UIViewController {
+class NASAViewController: UIViewController, UpdateReceiverType {
     
     // MARK: - UI
     
@@ -60,6 +60,10 @@ class NASAViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             ])
+    }
+    
+    func didUpdateModel() {
+        collectionView.reloadData()
     }
 }
 
