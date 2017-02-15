@@ -14,6 +14,7 @@
 		852DA2CC1E428DC500789743 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CA1E428DC500789743 /* Alamofire.framework */; };
 		852DA2CD1E428DC500789743 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CB1E428DC500789743 /* Moya.framework */; };
 		856E66D11E54DBF500C387B7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856E66D01E54DBF500C387B7 /* Kingfisher.framework */; };
+		856E66D31E54DC1700C387B7 /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 856E66D21E54DC1700C387B7 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8598F8391E4B837D00F0200B /* NASAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598F8381E4B837D00F0200B /* NASAViewModel.swift */; };
 		8598F83B1E4B854300F0200B /* RoverPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598F83A1E4B854300F0200B /* RoverPhotos.swift */; };
 		8598F83D1E4C0CD900F0200B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */; };
@@ -32,6 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				856E66D31E54DC1700C387B7 /* Kingfisher.framework in CopyFiles */,
 				8598F83F1E4C0D1C00F0200B /* SwiftyJSON.framework in CopyFiles */,
 				85C508D81E4933C9009D54CC /* Alamofire.framework in CopyFiles */,
 				85C508D91E4933C9009D54CC /* Moya.framework in CopyFiles */,
@@ -51,6 +53,7 @@
 		852DA2CA1E428DC500789743 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		852DA2CB1E428DC500789743 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		856E66D01E54DBF500C387B7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		856E66D21E54DC1700C387B7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		8598F8381E4B837D00F0200B /* NASAViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAViewModel.swift; sourceTree = "<group>"; };
 		8598F83A1E4B854300F0200B /* RoverPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPhotos.swift; sourceTree = "<group>"; };
 		8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		852DA2AB1E426E3300789743 = {
 			isa = PBXGroup;
 			children = (
+				856E66D21E54DC1700C387B7 /* Kingfisher.framework */,
 				8598F83E1E4C0D1C00F0200B /* SwiftyJSON.framework */,
 				85C508D51E4933C9009D54CC /* Alamofire.framework */,
 				85C508D61E4933C9009D54CC /* Moya.framework */,
