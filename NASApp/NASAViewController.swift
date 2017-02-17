@@ -19,6 +19,8 @@ class NASAViewController: UIViewController {
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
+        
         return collectionView
     }()
     
