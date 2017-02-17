@@ -9,4 +9,8 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
+    
+    // MARK: - Properties
+    
+    static var reuseIdentifier = "photoCell"
 }
