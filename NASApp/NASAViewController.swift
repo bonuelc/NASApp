@@ -27,6 +27,7 @@ class NASAViewController: UIViewController, UpdateReceiverType {
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
 
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         return collectionView
     }()
@@ -88,5 +89,15 @@ extension NASAViewController: UICollectionViewDataSource {
         let url = nasaViewModel.photoURL(at: indexPath)
         
         return cell.configure(withImageFrom: url)
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension NASAViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let side = collectionView.bounds.size.width
+        return CGSize(width: side, height: side)
     }
 }
