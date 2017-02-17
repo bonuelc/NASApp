@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoCell: UICollectionViewCell {
     
     // MARK: - UI
     
-    private let imageView: UIImageView
+    fileprivate let imageView: UIImageView
     
     // MARK: - Properties
     
@@ -36,5 +37,17 @@ class PhotoCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         contentView.addSubview(imageView)
+    }
+}
+
+// MARK: - Helper Methods
+
+extension PhotoCell {
+    
+    func configure(withImageFrom url: URL) -> PhotoCell {
+        
+        imageView.kf.setImage(with: url)
+        
+        return self
     }
 }
