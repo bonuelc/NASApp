@@ -28,6 +28,8 @@ class RoverPhotoViewController: UIViewController {
         
         let textView = UITextView()
         
+        textView.backgroundColor = .clear
+        
         textView.translatesAutoresizingMaskIntoConstraints = false
         
         return textView
