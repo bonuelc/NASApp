@@ -20,6 +20,12 @@ class RoverPhotos {
         return photoURLs.count
     }
     
+    // MARK: - Initializers
+    
+    init() {
+        fetchPhotoURLs(from: .curiosity)
+    }
+    
     private func fetchPhotoURLs(from rover: MyService) {
         let provider = MoyaProvider<MyService>()
         provider.request(rover) { result in
