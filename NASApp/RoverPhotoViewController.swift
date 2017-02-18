@@ -24,6 +24,15 @@ class RoverPhotoViewController: UIViewController {
        return imageView
     }()
     
+    lazy var textView: UITextView = {
+        
+        let textView = UITextView()
+        
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return textView
+    }()
+    
     // MARK: - Properties
     
     let photoURL: URL
