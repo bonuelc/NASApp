@@ -92,6 +92,19 @@ extension NASAViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
+extension NASAViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let url = nasaViewModel.photoURL(at: indexPath)
+        let roverPhotoVC = RoverPhotoViewController(photoURL: url)
+
+        show(roverPhotoVC, sender: nil)
+    }
+}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension NASAViewController: UICollectionViewDelegateFlowLayout {
