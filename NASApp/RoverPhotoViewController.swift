@@ -40,4 +40,18 @@ class RoverPhotoViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // Mark: - Layout
+    
+    override func viewWillLayoutSubviews() {
+        
+        view.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+        ])
+    }
 }
