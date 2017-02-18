@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RoverPhotoViewController: UIViewController {
+    
+    // MARK: - UI
+    
+    lazy var imageView: UIImageView = {
+        
+        let imageView = UIImageView()
+        
+        imageView.kf.setImage(with: self.photoURL)
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+       return imageView
+    }()
     
     // MARK: - Properties
     
