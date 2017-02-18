@@ -31,6 +31,7 @@ class RoverPhotoViewController: UIViewController {
         textView.backgroundColor = .clear
         
         textView.textColor = .white
+        textView.font = UIFont.boldSystemFont(ofSize: 30.0)
         
         textView.translatesAutoresizingMaskIntoConstraints = false
         
