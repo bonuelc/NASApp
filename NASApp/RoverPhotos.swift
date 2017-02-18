@@ -15,6 +15,7 @@ class RoverPhotos {
     // MARK: - Properties
     
     fileprivate var photoURLs = [URL]()
+    var updateReceiver: UpdateReceiverType?
     
     var count: Int {
         return photoURLs.count
