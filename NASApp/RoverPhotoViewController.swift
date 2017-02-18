@@ -55,12 +55,18 @@ class RoverPhotoViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         
         view.addSubview(imageView)
+        view.addSubview(textView)
         
         NSLayoutConstraint.activate([
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor),
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            
+            textView.topAnchor.constraint(equalTo: imageView.topAnchor),
+            textView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
+            textView.leftAnchor.constraint(equalTo: imageView.leftAnchor),
+            textView.rightAnchor.constraint(equalTo: imageView.rightAnchor),
         ])
     }
 }
