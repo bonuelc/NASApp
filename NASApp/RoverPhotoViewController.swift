@@ -104,6 +104,29 @@ extension RoverPhotoViewController {
 
 extension RoverPhotoViewController: MFMailComposeViewControllerDelegate {
     
+    func composeEmail() {
+        
+        if MFMailComposeViewController.canSendMail() {
+            
+            let mail = MFMailComposeViewController()
+            
+            mail.mailComposeDelegate = self
+            
+            guard let png = makePostcard() else {
+                presentAlert(title: "Error making postcard")
+                return
+            }
+            
+            mail.addAttachmentData(png, mimeType: "image/png", fileName: "NASApp.png")
+            
+            present(mail, animated: true)
+            
+        } else {
+            
+            presentAlert(title: "NASApp cannot send email", message: "Please check your email settings")
+        }
+    }
+    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
