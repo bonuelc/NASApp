@@ -78,3 +78,25 @@ class RoverPhotoViewController: UIViewController {
         ])
     }
 }
+
+// MARK: - Helper Methods
+
+extension RoverPhotoViewController {
+    
+    func makePostcard() -> Data? {
+        
+        textView.endEditing(true)
+        
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0.0)
+        
+        guard let currentContext = UIGraphicsGetCurrentContext() else { return nil }
+        
+        imageView.layer.render(in: currentContext)
+        
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        
+        UIGraphicsEndImageContext()
+        
+        return UIImagePNGRepresentation(image)
+    }
+}
