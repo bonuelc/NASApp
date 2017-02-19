@@ -59,6 +59,13 @@ class RoverPhotoViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // add 'compose email' button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeEmail))
+    }
+    
     // Mark: - Layout
     
     override func viewWillLayoutSubviews() {
