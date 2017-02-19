@@ -72,7 +72,7 @@ extension MyService: TargetType {
     
     var task: Task {
         switch self {
-        case .curiosity, .opportunity, .spirit: return .request
+        case .apod, .curiosity, .opportunity, .spirit: return .request
         }
     }
 }
