@@ -26,6 +26,7 @@ extension MyService: TargetType {
     
     var path: String {
         switch self {
+        case .apod: return "/planetary/apod"
         case .curiosity: return "/mars-photos/api/v1/rovers/curiosity/photos"
         case .opportunity: return "/mars-photos/api/v1/rovers/opportunity/photos"
         case .spirit: return "/mars-photos/api/v1/rovers/spirit/photos"
