@@ -11,6 +11,15 @@ import Moya
 
 private let api_key = "zlTZaHucX1ayYgkmRPCWjLpiTsny09pZHlHzP0HI"
 
+extension Date {
+    
+    func yyyyMMdd(withSeparator separator: String = "") -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy\(separator)MM\(separator)dd"
+        return formatter.string(from: self)
+    }
+}
+
 enum MyService {
     case apod(date: Date?)
     case curiosity
@@ -38,7 +47,16 @@ extension MyService: TargetType {
     }
     
     var parameters: [String : Any]? {
-        return ["sol":"1000", "api_key":api_key]
+        switch self {
+        case .apod(let date):
+            var parameters = ["api_key":api_key]
+            if let date = date {
+                parameters["date"] = date.yyyyMMdd(withSeparator: "-")
+            }
+            return parameters
+        case .curiosity, .opportunity, .spirit: return ["sol":"1000", "api_key":api_key]
+        }
+        
     }
     
     var parameterEncoding: ParameterEncoding {
