@@ -21,6 +21,9 @@ class RoverPhotoViewController: UIViewController {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
+        // so textView can still receive taps
+        imageView.isUserInteractionEnabled = true
+        
        return imageView
     }()
     
@@ -60,7 +63,7 @@ class RoverPhotoViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         
         view.addSubview(imageView)
-        view.addSubview(textView)
+        imageView.addSubview(textView)
         
         NSLayoutConstraint.activate([
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
