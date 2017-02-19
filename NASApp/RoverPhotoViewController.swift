@@ -109,3 +109,14 @@ extension RoverPhotoViewController: MFMailComposeViewControllerDelegate {
     }
 }
 
+extension UIViewController {
+    
+    func presentAlert(title: String?, message: String? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
+    }
+}
