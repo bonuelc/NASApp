@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import MessageUI
 
 class RoverPhotoViewController: UIViewController {
     
@@ -100,3 +101,7 @@ extension RoverPhotoViewController {
         return UIImagePNGRepresentation(image)
     }
 }
+
+extension RoverPhotoViewController: MFMailComposeViewControllerDelegate {
+}
+
