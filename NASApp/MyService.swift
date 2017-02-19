@@ -12,6 +12,7 @@ import Moya
 private let api_key = "zlTZaHucX1ayYgkmRPCWjLpiTsny09pZHlHzP0HI"
 
 enum MyService {
+    case apod(date: Date?)
     case curiosity
     case opportunity
     case spirit
