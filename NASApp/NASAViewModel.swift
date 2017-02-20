@@ -43,6 +43,7 @@ class NASAViewModel: UpdateReceiverType {
         guard let nasaSection = NASASection(rawValue: section) else { fatalError() }
         
         switch nasaSection {
+        case .astronomyPictureOfTheDay: return 1
         case .marsRoverImagery: return roverPhotos.count
         default: return 0
         }
