@@ -11,6 +11,7 @@ import Foundation
 enum NASASection: Int {
     case marsRoverImagery
     case COUNT
+    case astronomyPictureOfTheDay
     
     static var count = {
         return NASASection.COUNT.rawValue
