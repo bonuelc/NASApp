@@ -54,6 +54,8 @@ class NASAViewModel: UpdateReceiverType {
         guard let nasaSection = NASASection(rawValue: indexPath.section) else { fatalError() }
         
         switch nasaSection {
+        case .astronomyPictureOfTheDay:
+            return URL(string: "https://apod.nasa.gov/apod/image/1701/pandora_cassini_960.jpg")! // TODO: replace stubbed data
         case .marsRoverImagery: return roverPhotos[indexPath.row]
         default: fatalError()
         }
