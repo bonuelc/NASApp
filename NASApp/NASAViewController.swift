@@ -24,6 +24,8 @@ class NASAViewController: UIViewController, UpdateReceiverType {
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        // TODO: does it make sense to reuse this cell?
+        collectionView.register(ScrollViewCell.self, forCellWithReuseIdentifier: ScrollViewCell.reuseIdentifier)
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
 
         collectionView.dataSource = self
