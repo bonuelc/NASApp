@@ -9,6 +9,10 @@
 import UIKit
 import Kingfisher
 
+enum Page: Int {
+    case left, center, right
+}
+
 class ScrollViewCell: UICollectionViewCell {
     
     // MARK: - UI
