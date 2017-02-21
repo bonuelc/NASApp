@@ -21,6 +21,10 @@ class ScrollViewCell: UICollectionViewCell {
         return scrollView
     }()
     
+    // MARK: - Properties
+    
+    static var reuseIdentifier = "scrollViewCell"
+    
     // MARK: - Layout
     
     override func layoutSubviews() {
