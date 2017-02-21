@@ -9,4 +9,21 @@
 import UIKit
 
 class ScrollViewCell: UICollectionViewCell {
+    
+    // MARK: - UI
+    
+    lazy var scrollView: UIScrollView = {
+        
+        let scrollView = UIScrollView(frame: self.frame)
+        
+        scrollView.isPagingEnabled = true
+        
+        return scrollView
+    }()
+    
+    // MARK: - Layout
+    
+    override func layoutSubviews() {
+        contentView.addSubview(scrollView)
+    }
 }
