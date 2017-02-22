@@ -10,7 +10,11 @@ import Foundation
 
 enum NASASection: Int {
     case marsRoverImagery
-    case count
+    case COUNT
+    
+    static var count = {
+        return NASASection.COUNT.rawValue
+    }()
 }
 
 class NASAViewModel {
