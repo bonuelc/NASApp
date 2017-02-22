@@ -22,15 +22,18 @@ class NASAViewModel: UpdateReceiverType {
     
     // MARK: Properties
     
+    private let apodPhotos: APODPhotos
     private let roverPhotos: RoverPhotos
     var updateReceiver: UpdateReceiverType?
     
     // MARK: - Initializers
     
-    init(roverPhotos: RoverPhotos = RoverPhotos()) {
+    init(apodPhotos: APODPhotos = APODPhotos(), roverPhotos: RoverPhotos = RoverPhotos()) {
         
+        self.apodPhotos = apodPhotos
         self.roverPhotos = roverPhotos
         
+        self.apodPhotos.updateReceiver = self
         self.roverPhotos.updateReceiver = self
     }
         
