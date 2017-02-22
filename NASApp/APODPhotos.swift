@@ -9,4 +9,8 @@
 import Foundation
 
 class APODPhotos {
+    
+    // MARK: - Properties
+    
+    var urls = [String : URL]()
 }
