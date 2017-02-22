@@ -41,7 +41,7 @@ class ScrollViewCell: UICollectionViewCell {
 
 extension ScrollViewCell {
     
-    func configure(withImagesFrom urls: [URL?]) -> ScrollViewCell {
+    func configure(withImagesFrom urls: [URL?], scrollTo page: Page = .center) -> ScrollViewCell {
         
         scrollView.removeSubviews()
         
@@ -62,7 +62,23 @@ extension ScrollViewCell {
         
         scrollView.contentSize = CGSize(width: contentWidthOfScrollView, height: scrollView.bounds.size.height)
         
+        scrollView.scroll(to: page)
+        
         return self
+    }
+}
+
+private extension UIScrollView {
+    
+    func scroll(to page: Page) {
+        
+        let size = self.bounds.size
+        
+        switch page {
+        case .left: self.bounds = CGRect(origin: .zero, size: size)
+        case .center: self.bounds = CGRect(origin: CGPoint(x: self.contentSize.width / 3, y: self.frame.minY), size: size)
+        case .right: self.bounds = CGRect(origin: CGPoint(x: self.contentSize.width * 2 / 3, y: self.frame.minY), size: size)
+        }
     }
 }
 
