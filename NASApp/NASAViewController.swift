@@ -100,10 +100,16 @@ extension NASAViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let url = nasaViewModel.photoURL(at: indexPath)
-        let roverPhotoVC = RoverPhotoViewController(photoURL: url)
-
-        show(roverPhotoVC, sender: nil)
+        guard let section = NASASection(rawValue: indexPath.section) else { fatalError() }
+        
+        switch section {
+        case .marsRoverImagery:
+            guard let url = nasaViewModel.photoURL(at: indexPath) else { fatalError() }
+            let roverPhotoVC = RoverPhotoViewController(photoURL: url)
+            
+            show(roverPhotoVC, sender: nil)
+        default: break
+        }
     }
 }
 
