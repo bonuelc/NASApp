@@ -17,7 +17,7 @@ class APODPhotos {
     var urls = [String : URL]()
     var updateReceiver: UpdateReceiverType?
     
-    private func fetchPhotoURL(from date: Date? = nil) {
+    fileprivate func fetchPhotoURL(from date: Date? = nil) {
         
         let dateString = date?.yyyyMMdd(withSeparator: "-") ?? Date().yyyyMMdd(withSeparator: "-")
         
@@ -53,5 +53,20 @@ class APODPhotos {
                 print("Error not handled: \(error)")
             }
         }
+    }
+}
+
+// MARK: - Helper Methods
+
+extension APODPhotos {
+    
+    func photoURL(from date: Date) -> URL? {
+        
+        guard let url = urls[date.yyyyMMdd(withSeparator: "-")] else {
+            fetchPhotoURL(from: date)
+            return nil
+        }
+        
+        return url
     }
 }
