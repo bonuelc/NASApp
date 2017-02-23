@@ -83,6 +83,14 @@ extension APODPhotos {
         let date = Date().subtractingNumberOfDays(numberOfDaysBeforeToday)
         return photoURL(from: date)
     }
+    
+    func shiftOneDay(_ shift: DateShift) {
+        
+        // don't allow negative indices in numberOfDaysBeforeToday
+        if shift == .forward && numberOfDaysBeforeToday.last == 0 { return }
+        
+        numberOfDaysBeforeToday = shift == .forward ? numberOfDaysBeforeToday.map { $0 - 1 } : numberOfDaysBeforeToday.map { $0 + 1 }
+    }
 }
 
 extension Date {
