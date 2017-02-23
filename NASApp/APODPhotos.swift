@@ -70,3 +70,11 @@ extension APODPhotos {
         return url
     }
 }
+
+extension Date {
+    
+    func subtractingNumberOfDays(_ days: Int) -> Date {
+        let timeInterval = TimeInterval(-1 * days * 24 * 60 * 60)
+        return self.addingTimeInterval(timeInterval)
+    }
+}
