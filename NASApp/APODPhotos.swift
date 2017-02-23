@@ -15,6 +15,7 @@ class APODPhotos {
     // MARK: - Properties
     
     var urls = [String : URL]()
+    var updateReceiver: UpdateReceiverType?
     
     private func fetchPhotoURL(from date: Date? = nil) {
         
