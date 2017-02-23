@@ -67,6 +67,14 @@ class NASAViewModel: UpdateReceiverType {
         }
     }
     
+    func scrollViewDidScroll(toPage page: Page) {
+        switch page {
+        case .left: apodPhotos.shiftOneDay(.backward)
+        case .center: break
+        case .right: apodPhotos.shiftOneDay(.forward)
+        }
+    }
+    
     func didUpdateModel() {
         updateReceiver?.didUpdateModel()
     }
