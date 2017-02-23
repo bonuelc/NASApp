@@ -14,7 +14,11 @@ class APODPhotos {
     
     // MARK: - Properties
     
-    var numberOfDaysBeforeToday = [2, 1, 0] // 0 == today, 1 == yesterday, etc.
+    var numberOfDaysBeforeToday = [2, 1, 0] { // 0 == today, 1 == yesterday, etc.
+        didSet {
+            updateReceiver?.didUpdateModel()
+        }
+    }
     var urls = [String : URL]()
     var updateReceiver: UpdateReceiverType?
     
