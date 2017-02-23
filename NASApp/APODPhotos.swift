@@ -10,6 +10,10 @@ import Foundation
 import Moya
 import SwiftyJSON
 
+enum DateShift {
+    case backward, forward
+}
+
 class APODPhotos {
     
     // MARK: - Properties
