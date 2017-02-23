@@ -69,6 +69,11 @@ extension APODPhotos {
         
         return url
     }
+    
+    func photoURL(fromNumberOfDaysBeforeToday numberOfDaysBeforeToday: Int ) -> URL? {
+        let date = Date().subtractingNumberOfDays(numberOfDaysBeforeToday)
+        return photoURL(from: date)
+    }
 }
 
 extension Date {
