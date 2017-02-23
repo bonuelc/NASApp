@@ -26,6 +26,10 @@ class NASAViewModel: UpdateReceiverType {
     private let roverPhotos: RoverPhotos
     var updateReceiver: UpdateReceiverType?
     
+    var scrollViewIndices: [Int] {
+        return apodPhotos.numberOfDaysBeforeToday
+    }
+    
     // MARK: - Initializers
     
     init(apodPhotos: APODPhotos = APODPhotos(), roverPhotos: RoverPhotos = RoverPhotos()) {
