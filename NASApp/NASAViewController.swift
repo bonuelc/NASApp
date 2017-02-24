@@ -175,3 +175,14 @@ extension NASAViewController: UIScrollViewDelegate {
         nasaViewModel.scrollViewDidScroll(toPage: page)
     }
 }
+
+// MARK: - Helper Methods
+
+extension NASAViewController {
+    
+    func landingPageTapped() {
+        UIView.animate(withDuration: 1, animations: { self.landingPage?.alpha = 0 } ) { _ in
+            self.landingPage = nil
+        }
+    }
+}
