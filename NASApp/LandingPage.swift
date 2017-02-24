@@ -22,4 +22,17 @@ class LandingPage: UIView {
         
         return imageView
     }()
+    
+    lazy var topLabel: UILabel = {
+        
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.text = "Welcome"
+        label.textColor = .white
+        label.textAlignment = .center
+        
+        return label
+    }()
 }
