@@ -64,6 +64,13 @@ class NASAViewController: UIViewController, UpdateReceiverType {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(landingPageTapped))
+        
+        landingPage?.addGestureRecognizer(tap)
+    }
+    
     // MARK: - Layout
     
     override func viewWillLayoutSubviews() {
