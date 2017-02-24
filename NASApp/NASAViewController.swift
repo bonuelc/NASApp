@@ -34,6 +34,17 @@ class NASAViewController: UIViewController, UpdateReceiverType {
         return collectionView
     }()
     
+    lazy var landingPage: LandingPage? = {
+        
+        let landingPage = LandingPage()
+        
+        landingPage.translatesAutoresizingMaskIntoConstraints = false
+        
+        landingPage.backgroundColor = .black
+        
+        return landingPage
+    }()
+    
     // MARK: - Properties
     
     let nasaViewModel: NASAViewModel
@@ -58,12 +69,18 @@ class NASAViewController: UIViewController, UpdateReceiverType {
     override func viewWillLayoutSubviews() {
     
         view.addSubview(collectionView)
+        view.addSubview(landingPage!)
     
         NSLayoutConstraint.activate([
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            landingPage!.leftAnchor.constraint(equalTo: view.leftAnchor),
+            landingPage!.topAnchor.constraint(equalTo: view.topAnchor),
+            landingPage!.rightAnchor.constraint(equalTo: view.rightAnchor),
+            landingPage!.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             ])
     }
     
