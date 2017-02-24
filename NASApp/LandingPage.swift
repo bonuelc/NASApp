@@ -35,4 +35,17 @@ class LandingPage: UIView {
         
         return label
     }()
+    
+    lazy var bottomLabel: UILabel = {
+        
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.text = "to NASAPP"
+        label.textColor = .white
+        label.textAlignment = .center
+        
+        return label
+    }()
 }
