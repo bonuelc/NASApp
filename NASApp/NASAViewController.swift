@@ -141,4 +141,17 @@ extension NASAViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension NASAViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if scrollView == collectionView {
+            return
+        }
+        
+        let pageWidth = Int(scrollView.contentSize.width) / 3
+        
+        guard let page = Page(rawValue: Int(scrollView.contentOffset.x) / pageWidth) else { fatalError() }
+        
+        nasaViewModel.scrollViewDidScroll(toPage: page)
+    }
 }
