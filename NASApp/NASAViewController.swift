@@ -86,11 +86,28 @@ extension NASAViewController: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        guard let section = NASASection(rawValue: indexPath.section) else { fatalError() }
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as? PhotoCell else { fatalError() }
-        let url = nasaViewModel.photoURL(at: indexPath)
-        
-        return cell.configure(withImageFrom: url)
+        switch section {
+        case .astronomyPictureOfTheDay:
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScrollViewCell.reuseIdentifier, for: indexPath) as? ScrollViewCell else { fatalError() }
+            
+            let scrollViewIndices = nasaViewModel.scrollViewIndices.map { IndexPath(row: $0, section: indexPath.section) }
+            let urls = scrollViewIndices.map { nasaViewModel.photoURL(at: $0) }
+            
+            return cell.configure(withImagesFrom: urls)
+            
+        case .marsRoverImagery:
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as? PhotoCell else { fatalError() }
+            guard let url = nasaViewModel.photoURL(at: indexPath) else { return cell }
+            
+            return cell.configure(withImageFrom: url)
+            
+        default: fatalError()
+        }
     }
 }
 
