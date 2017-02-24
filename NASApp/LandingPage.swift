@@ -9,4 +9,17 @@
 import UIKit
 
 class LandingPage: UIView {
+    
+    // MARK: - UI
+    
+    lazy var imageView: UIImageView = {
+        
+        let imageView = UIImageView()
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageView.contentMode = .scaleAspectFill
+        
+        return imageView
+    }()
 }
