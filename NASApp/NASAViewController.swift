@@ -139,3 +139,6 @@ extension NASAViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: side, height: side)
     }
 }
+
+extension NASAViewController: UIScrollViewDelegate {
+}
