@@ -32,7 +32,9 @@ class APODPhotos {
                 switch response.statusCode {
                 case 200:
                     let json = JSON(data: response.data)
-                    let urlString = json["url"].stringValue
+                    
+                    let videoPlaceholderURLString = "https://www.eig88.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png"
+                    let urlString = json["media_type"].stringValue == "image" ? json["url"].stringValue : videoPlaceholderURLString
                     let url = URL(string: urlString)!
                     
                     self.urls[urlString] = url
