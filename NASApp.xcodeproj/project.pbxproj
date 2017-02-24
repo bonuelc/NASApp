@@ -22,6 +22,7 @@
 		8598F83D1E4C0CD900F0200B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */; };
 		8598F83F1E4C0D1C00F0200B /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8598F83E1E4C0D1C00F0200B /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85A84F5E1E608CFC001C02BF /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84F5D1E608CFC001C02BF /* LandingPage.swift */; };
+		85A84F7A1E60FC9A001C02BF /* NASAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84F791E60FC9A001C02BF /* NASAppTests.swift */; };
 		85B857EF1E5B77750067C2E5 /* ScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B857EE1E5B77750067C2E5 /* ScrollViewCell.swift */; };
 		85C1ECB41E47EA3800F5F930 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1ECB31E47EA3800F5F930 /* MyService.swift */; };
 		85C508D21E49332B009D54CC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C508D11E49332B009D54CC /* Result.framework */; };
@@ -30,6 +31,16 @@
 		85C508DA1E4933C9009D54CC /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85C508D71E4933C9009D54CC /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85C6E36F1E5A5507002D09A1 /* APODPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6E36E1E5A5507002D09A1 /* APODPhotos.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85A84F7C1E60FC9A001C02BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 852DA2AC1E426E3400789743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 852DA2B31E426E3400789743;
+			remoteInfo = NASApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		85C508D41E4933AD009D54CC /* CopyFiles */ = {
@@ -66,6 +77,9 @@
 		8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8598F83E1E4C0D1C00F0200B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		85A84F5D1E608CFC001C02BF /* LandingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		85A84F771E60FC9A001C02BF /* NASAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A84F791E60FC9A001C02BF /* NASAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAppTests.swift; sourceTree = "<group>"; };
+		85A84F7B1E60FC9A001C02BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85B857EE1E5B77750067C2E5 /* ScrollViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewCell.swift; sourceTree = "<group>"; };
 		85C1ECB31E47EA3800F5F930 /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		85C508D11E49332B009D54CC /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -88,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85A84F741E60FC9A001C02BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +121,7 @@
 				85C508D61E4933C9009D54CC /* Moya.framework */,
 				85C508D71E4933C9009D54CC /* Result.framework */,
 				852DA2B61E426E3500789743 /* NASApp */,
+				85A84F781E60FC9A001C02BF /* NASAppTests */,
 				852DA2B51E426E3500789743 /* Products */,
 				852DA2C91E428DC500789743 /* Frameworks */,
 			);
@@ -109,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				852DA2B41E426E3500789743 /* NASApp.app */,
+				85A84F771E60FC9A001C02BF /* NASAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +168,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85A84F781E60FC9A001C02BF /* NASAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				85A84F791E60FC9A001C02BF /* NASAppTests.swift */,
+				85A84F7B1E60FC9A001C02BF /* Info.plist */,
+			);
+			path = NASAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +199,24 @@
 			productReference = 852DA2B41E426E3500789743 /* NASApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		85A84F761E60FC9A001C02BF /* NASAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85A84F7E1E60FC9A001C02BF /* Build configuration list for PBXNativeTarget "NASAppTests" */;
+			buildPhases = (
+				85A84F731E60FC9A001C02BF /* Sources */,
+				85A84F741E60FC9A001C02BF /* Frameworks */,
+				85A84F751E60FC9A001C02BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85A84F7D1E60FC9A001C02BF /* PBXTargetDependency */,
+			);
+			name = NASAppTests;
+			productName = NASAppTests;
+			productReference = 85A84F771E60FC9A001C02BF /* NASAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +231,12 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4L8HM32D5V;
 						ProvisioningStyle = Automatic;
+					};
+					85A84F761E60FC9A001C02BF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4L8HM32D5V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 852DA2B31E426E3400789743;
 					};
 				};
 			};
@@ -198,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				852DA2B31E426E3400789743 /* NASApp */,
+				85A84F761E60FC9A001C02BF /* NASAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +266,13 @@
 			files = (
 				852DA2C21E426E3500789743 /* LaunchScreen.storyboard in Resources */,
 				852DA2BF1E426E3500789743 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85A84F751E60FC9A001C02BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +315,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85A84F731E60FC9A001C02BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85A84F7A1E60FC9A001C02BF /* NASAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85A84F7D1E60FC9A001C02BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 852DA2B31E426E3400789743 /* NASApp */;
+			targetProxy = 85A84F7C1E60FC9A001C02BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		852DA2C01E426E3500789743 /* LaunchScreen.storyboard */ = {
@@ -390,6 +470,34 @@
 			};
 			name = Release;
 		};
+		85A84F7F1E60FC9A001C02BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				INFOPLIST_FILE = NASAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASApp.app/NASApp";
+			};
+			name = Debug;
+		};
+		85A84F801E60FC9A001C02BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				INFOPLIST_FILE = NASAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASApp.app/NASApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -410,6 +518,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		85A84F7E1E60FC9A001C02BF /* Build configuration list for PBXNativeTarget "NASAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85A84F7F1E60FC9A001C02BF /* Debug */,
+				85A84F801E60FC9A001C02BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
