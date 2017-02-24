@@ -94,6 +94,8 @@ extension NASAViewController: UICollectionViewDataSource {
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScrollViewCell.reuseIdentifier, for: indexPath) as? ScrollViewCell else { fatalError() }
             
+            cell.scrollView.delegate = self
+            
             let scrollViewIndices = nasaViewModel.scrollViewIndices.map { IndexPath(row: $0, section: indexPath.section) }
             let urls = scrollViewIndices.map { nasaViewModel.photoURL(at: $0) }
             
