@@ -48,4 +48,27 @@ class LandingPage: UIView {
         
         return label
     }()
+    
+    override func layoutSubviews() {
+        
+        addSubview(imageView)
+        addSubview(topLabel)
+        addSubview(bottomLabel)
+        
+        NSLayoutConstraint.activate([
+            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            imageView.leftAnchor.constraint(equalTo: leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: rightAnchor),
+            imageView.heightAnchor.constraint(equalTo: widthAnchor),
+            
+            topLabel.centerYAnchor.constraint(equalTo: imageView.topAnchor, constant: -20),
+            topLabel.leftAnchor.constraint(equalTo: leftAnchor),
+            topLabel.rightAnchor.constraint(equalTo: rightAnchor),
+            
+            bottomLabel.centerYAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            bottomLabel.leftAnchor.constraint(equalTo: leftAnchor),
+            bottomLabel.rightAnchor.constraint(equalTo: rightAnchor),
+        ])
+    }
+
 }
