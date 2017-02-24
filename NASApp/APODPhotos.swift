@@ -39,6 +39,12 @@ class APODPhotos {
                     
                     self.urls[urlString] = url
                     self.urls[dateString] = url
+                case 400:
+                    // date is out of APOD range
+                    let urlString = "http://dlmjconstruction.com/wp-content/uploads/2015/08/placeholder-Copy-4-1024x769.png"
+                    let url = URL(string: urlString)
+                    self.urls[urlString] = url
+                    self.urls[dateString] = url
                 default:
                     print("Received HTTP response: \(response.statusCode), which was not handled")
                 }
