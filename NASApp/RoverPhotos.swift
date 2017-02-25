@@ -14,7 +14,11 @@ class RoverPhotos {
     
     // MARK: - Properties
     
-    fileprivate var photoURLs = [URL]()
+    fileprivate var photoURLs = [URL]() {
+        didSet {
+            updateReceiver?.didUpdateModel()
+        }
+    }
     var updateReceiver: UpdateReceiverType?
     
     var count: Int {
