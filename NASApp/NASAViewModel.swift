@@ -22,12 +22,12 @@ class NASAViewModel: UpdateReceiverType {
     
     // MARK: Properties
     
-    private let apodPhotos: APODPhotos
-    private let roverPhotos: RoverPhotos
+    private let apodPhotos: APODPhotos?
+    private let roverPhotos: RoverPhotos?
     var updateReceiver: UpdateReceiverType?
     
     var scrollViewIndices: [Int] {
-        return apodPhotos.numberOfDaysBeforeToday
+        return apodPhotos!.numberOfDaysBeforeToday
     }
     
     var todaysImage: URL? {
@@ -36,13 +36,13 @@ class NASAViewModel: UpdateReceiverType {
     
     // MARK: - Initializers
     
-    init(apodPhotos: APODPhotos = APODPhotos(), roverPhotos: RoverPhotos = RoverPhotos()) {
+    init(apodPhotos: APODPhotos? = APODPhotos(), roverPhotos: RoverPhotos? = RoverPhotos()) {
         
         self.apodPhotos = apodPhotos
         self.roverPhotos = roverPhotos
         
-        self.apodPhotos.updateReceiver = self
-        self.roverPhotos.updateReceiver = self
+        self.apodPhotos?.updateReceiver = self
+        self.roverPhotos?.updateReceiver = self
     }
         
     var numberOfSections: Int {
@@ -54,8 +54,8 @@ class NASAViewModel: UpdateReceiverType {
         guard let nasaSection = NASASection(rawValue: section) else { fatalError() }
         
         switch nasaSection {
-        case .astronomyPictureOfTheDay: return 1
-        case .marsRoverImagery: return roverPhotos.count
+        case .astronomyPictureOfTheDay: return apodPhotos == nil ? 0 : 1
+        case .marsRoverImagery: return roverPhotos?.count ?? 0
         default: return 0
         }
     }
@@ -65,17 +65,17 @@ class NASAViewModel: UpdateReceiverType {
         guard let nasaSection = NASASection(rawValue: indexPath.section) else { fatalError() }
         
         switch nasaSection {
-        case .astronomyPictureOfTheDay: return apodPhotos.photoURL(fromNumberOfDaysBeforeToday: indexPath.row)
-        case .marsRoverImagery: return roverPhotos[indexPath.row]
+        case .astronomyPictureOfTheDay: return apodPhotos?.photoURL(fromNumberOfDaysBeforeToday: indexPath.row)
+        case .marsRoverImagery: return roverPhotos?[indexPath.row]
         default: fatalError()
         }
     }
     
     func scrollViewDidScroll(toPage page: Page) {
         switch page {
-        case .left: apodPhotos.shiftOneDay(.backward)
+        case .left: apodPhotos?.shiftOneDay(.backward)
         case .center: break
-        case .right: apodPhotos.shiftOneDay(.forward)
+        case .right: apodPhotos?.shiftOneDay(.forward)
         }
     }
     
