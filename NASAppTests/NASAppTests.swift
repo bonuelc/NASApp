@@ -12,6 +12,7 @@ import XCTest
 class NASAppTests: XCTestCase {
     
     var nasaViewModel: NASAViewModel!
+    var apodPhotos: APODPhotos!
     
     override func setUp() {
         super.setUp()
