@@ -22,6 +22,7 @@ class NASAppTests: XCTestCase {
     
     override func tearDown() {
         nasaViewModel = nil
+        apodPhotos = nil
         
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
