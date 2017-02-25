@@ -25,6 +25,12 @@ class APODPhotos {
     }
     var urls = [String : URL]()
     var updateReceiver: UpdateReceiverType?
+    let provider: MoyaProvider<MyService>
+    
+    init(provider: MoyaProvider<MyService> = MoyaProvider()) {
+        self.provider = provider
+        fetchPhotoURL()
+    }
     
     fileprivate func fetchPhotoURL(from date: Date? = nil) {
         
@@ -35,7 +41,6 @@ class APODPhotos {
             return
         }
         
-        let provider = MoyaProvider<MyService>()
         provider.request(.apod(date: date)) { result in
             switch result {
             case let .success(response):
