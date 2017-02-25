@@ -60,6 +60,17 @@ class NASAppTests: XCTestCase {
         XCTAssertEqual(roverPhotos[0].absoluteString, "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG")
     }
     
+    func testAPODPhotosJSONParse() {
+        let todayString = Date().yyyyMMdd(withSeparator: "-")
+        
+        guard let urlString = apodPhotos.urls[todayString]?.absoluteString else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertEqual(urlString, "http://apod.nasa.gov/apod/image/1701/aurora_voltmer_960.jpg")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
