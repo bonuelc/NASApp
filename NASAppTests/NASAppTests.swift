@@ -13,6 +13,7 @@ class NASAppTests: XCTestCase {
     
     var nasaViewModel: NASAViewModel!
     var apodPhotos: APODPhotos!
+    var roverPhotos: RoverPhotos!
     
     override func setUp() {
         super.setUp()
