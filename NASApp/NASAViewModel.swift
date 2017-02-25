@@ -16,6 +16,14 @@ enum NASASection: Int {
     static var count = {
         return NASASection.COUNT.rawValue
     }()
+    
+    var description: String {
+        switch self {
+        case .astronomyPictureOfTheDay: return "Astronomy Picture of the Day"
+        case .marsRoverImagery: return "Mars Rover Imagery"
+        default: return ""
+        }
+    }
 }
 
 class NASAViewModel: UpdateReceiverType {
