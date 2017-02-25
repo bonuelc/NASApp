@@ -30,6 +30,10 @@ class NASAViewModel: UpdateReceiverType {
         return apodPhotos.numberOfDaysBeforeToday
     }
     
+    var todaysImage: URL? {
+        return apodPhotos?.photoURL(fromNumberOfDaysBeforeToday: 0)
+    }
+    
     // MARK: - Initializers
     
     init(apodPhotos: APODPhotos = APODPhotos(), roverPhotos: RoverPhotos = RoverPhotos()) {
