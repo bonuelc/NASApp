@@ -86,6 +86,7 @@ class NASAViewController: UIViewController, UpdateReceiverType {
     
     func didUpdateModel() {
         collectionView.reloadData()
+        landingPage?.configure(withImageFrom: nasaViewModel.todaysImage)
     }
 }
 
