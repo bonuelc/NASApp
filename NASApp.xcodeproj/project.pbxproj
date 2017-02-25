@@ -17,6 +17,11 @@
 		856E66D31E54DC1700C387B7 /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 856E66D21E54DC1700C387B7 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		856E66DB1E56801B00C387B7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E66DA1E56801B00C387B7 /* PhotoCell.swift */; };
 		856E66DD1E57DEC900C387B7 /* RoverPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E66DC1E57DEC900C387B7 /* RoverPhotoViewController.swift */; };
+		85914AFB1E616EF000FDED1F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CA1E428DC500789743 /* Alamofire.framework */; };
+		85914AFC1E616EF000FDED1F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856E66D01E54DBF500C387B7 /* Kingfisher.framework */; };
+		85914AFD1E616EF000FDED1F /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852DA2CB1E428DC500789743 /* Moya.framework */; };
+		85914AFE1E616EF000FDED1F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C508D11E49332B009D54CC /* Result.framework */; };
+		85914AFF1E616EF000FDED1F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */; };
 		8598F8391E4B837D00F0200B /* NASAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598F8381E4B837D00F0200B /* NASAViewModel.swift */; };
 		8598F83B1E4B854300F0200B /* RoverPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598F83A1E4B854300F0200B /* RoverPhotos.swift */; };
 		8598F83D1E4C0CD900F0200B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8598F83C1E4C0CD900F0200B /* SwiftyJSON.framework */; };
@@ -106,6 +111,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85914AFB1E616EF000FDED1F /* Alamofire.framework in Frameworks */,
+				85914AFC1E616EF000FDED1F /* Kingfisher.framework in Frameworks */,
+				85914AFD1E616EF000FDED1F /* Moya.framework in Frameworks */,
+				85914AFE1E616EF000FDED1F /* Result.framework in Frameworks */,
+				85914AFF1E616EF000FDED1F /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +485,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NASAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASAppTests;
@@ -489,6 +503,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4L8HM32D5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NASAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gametime.NASAppTests;
@@ -526,6 +544,7 @@
 				85A84F801E60FC9A001C02BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
