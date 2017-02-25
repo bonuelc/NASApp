@@ -36,6 +36,10 @@ class NASAppTests: XCTestCase {
         XCTAssertEqual(nasaViewModel.numberOfSections, 2)
     }
     
+    func testInitialScrollViewIndices() {
+        XCTAssertEqual(nasaViewModel.scrollViewIndices, [2, 1, 0])
+    }
+    
     func testScrollLeftAndRight() {
         nasaViewModel.scrollViewDidScroll(toPage: .left)
         XCTAssertEqual(apodPhotos.numberOfDaysBeforeToday, [3, 2, 1])
