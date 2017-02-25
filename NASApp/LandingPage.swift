@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class LandingPage: UIView {
     
@@ -70,5 +71,8 @@ class LandingPage: UIView {
             bottomLabel.rightAnchor.constraint(equalTo: rightAnchor),
         ])
     }
-
+    
+    func configure(withImageFrom url: URL?) {
+        imageView.kf.setImage(with: url)
+    }
 }
