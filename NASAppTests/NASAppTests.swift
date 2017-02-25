@@ -36,6 +36,13 @@ class NASAppTests: XCTestCase {
         XCTAssertEqual(nasaViewModel.numberOfSections, 2)
     }
     
+    func testScrollLeftAndRight() {
+        nasaViewModel.scrollViewDidScroll(toPage: .left)
+        XCTAssertEqual(apodPhotos.numberOfDaysBeforeToday, [3, 2, 1])
+        nasaViewModel.scrollViewDidScroll(toPage: .right)
+        XCTAssertEqual(apodPhotos.numberOfDaysBeforeToday, [2, 1, 0])
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
